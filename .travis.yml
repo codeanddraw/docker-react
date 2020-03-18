@@ -9,11 +9,10 @@ script:
   - docker run -e CI=true nchaube/docker-react npm run test
 
 deploy:
-  edge: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-react"
-  environment: "DockerReact-env" 
+  env: "DockerReact-env" 
   bucket_name: "elasticbeanstalk-us-east-2-204832031538"
   bucket_path: "docker"
   on:
